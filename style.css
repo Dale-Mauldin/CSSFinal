@@ -1,0 +1,151 @@
+/* ================================
+   GLOBAL ORK THEME VARIABLES
+   ================================ */
+:root {
+    --ork-green: #3f6b2f;       /* Classic Ork skin tone */
+    --ork-red: #b20d0d;         /* Evil Sunz red */
+    --ork-yellow: #f2d10c;      /* Bad Moons yellow */
+    --metal-gray: #2c2c2c;      /* Dark steel */
+    --dark-metal: #1a1a1a;      /* Deeper metal */
+    --dirty-gray: #111;         /* Grimdark background */
+}
+
+/* ================================
+   BODY STYLING
+   ================================ */
+body {
+    background-color: var(--dirty-gray);
+    color: var(--ork-green);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ================================
+   SKIP LINK (accessible)
+   ================================ */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--ork-red);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    text-decoration: none;
+    border: 2px solid black;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* ================================
+   HEADINGS – ORKY STYLE
+   ================================ */
+h1, h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--ork-red);
+}
+
+/* ================================
+   NAVIGATION (Flexbox requirement)
+   ================================ */
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    background-color: var(--dark-metal);
+    padding: 12px;
+    margin: 0;
+    justify-content: center;
+    border-bottom: 5px solid var(--ork-red);
+    box-shadow: 0 4px 10px #000;
+}
+
+.navbar ul li a {
+    color: var(--ork-green);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid var(--metal-gray);
+    background-color: var(--metal-gray);
+}
+
+.navbar ul li a:hover {
+    background-color: var(--ork-red);
+    border-color: black;
+    transform: scale(1.07) rotate(-1.5deg);
+    transition: 0.2s ease-in-out;
+}
+
+/* ================================
+   IMAGE STYLING (Box Model requirement)
+   ================================ */
+.styled-image {
+    border: 7px solid var(--ork-yellow);
+    padding: 10px;
+    border-radius: 1px;
+    max-width: 70%;
+    height: auto;
+    margin: 12px;
+    background-color: #000;
+    transition: transform 0.3s ease;
+}
+
+/* Hover requirement */
+.styled-image:hover {
+    transform: scale(1.2);
+}
+
+/* ================================
+   GALLERY GRID (Grid requirement)
+   ================================ */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 10px;
+    border-color: var(--ork-yellow);
+}
+
+/* nth-child requirement for gallery */
+.gallery-grid img:nth-child(2n) {
+    border-radius: 20px;
+    border-color: var(--ork-red);
+}
+
+/* ================================
+   FLEX IMAGES (About page requirement)
+   ================================ */
+.flex-images {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    border-color: var(--ork-yellow);
+}
+
+.flex-images .character-card:nth-child(2n) img {
+    border-radius: 20px;
+    border-color: var(--ork-red);
+}
+
+/* ================================
+   ORK-LIST STYLING
+   ================================ */
+.ork-list {
+    list-style-type: square;
+    color: var(--ork-green);
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+/* ================================
+   PAGE SPACING
+   ================================ */
+main {
+    padding: 20px;
+}
